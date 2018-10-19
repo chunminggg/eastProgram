@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 云开发 quickstart
 
 这是云开发的快速启动指引，其中演示了如何上手使用云开发的三大基础能力：
@@ -10,3 +11,7 @@
 
 - [云开发文档](https://developers.weixin.qq.com/miniprogram/dev/wxcloud/basis/getting-started.html)
 
+=======
+# eastProgram
+东北证券-小程序
+>>>>>>> 10e6e07ba6d4fa2a717cdff7fa3824006f0a743a
