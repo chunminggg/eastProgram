@@ -1,17 +1,22 @@
-// miniprogram/pages/home/home.js
+// miniprogram/pages/activity/activity.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    name:'',
-    money:'',
-    phoneNumber:''
+    current:'activity',
   },
-  commitForm(){
+  handleChange({detail}){
+    if (detail.key == 'index') {
+      wx.redirectTo({
+        url: '../../pages/index/index',
+      })
+    }
+  },
+  jumpToActivityForm(){
     wx.navigateTo({
-      url: '../../pages/calForm/calculate',
+      url: '../../pages/milk/milk',
     })
   },
   /**

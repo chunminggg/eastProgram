@@ -1,18 +1,28 @@
-// miniprogram/pages/home/home.js
+// miniprogram/pages/milk/milk.js
+const { $Message } = require('../../lib/iview/dist/base/index');
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    name:'',
-    money:'',
-    phoneNumber:''
+    name: '',
+    address: '',
+    phoneNumber: ''
   },
-  commitForm(){
-    wx.navigateTo({
-      url: '../../pages/calForm/calculate',
+  commitForm() {
+    $Message({
+      type: 'success',
+      content: '恭喜您中奖失败'
     })
+    setTimeout(() => {
+      wx.redirectTo({
+        url: '../../pages/index/index',
+      })
+    }, 2000)
+
+
   },
   /**
    * 生命周期函数--监听页面加载

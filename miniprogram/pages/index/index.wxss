@@ -6,7 +6,15 @@ page {
   flex-direction: column;
   justify-content: flex-start;
 }
+.tab-tool {
+  position: fixed;
+  bottom: 0;
+  width:100%;
 
+}
+.activity-button{
+  margin-top:300rpx;
+}
 .userinfo, .uploader, .tunnel {
   margin-top: 40rpx;
   height: 140rpx;

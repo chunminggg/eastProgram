@@ -1,0 +1,7 @@
+{
+    "usingComponents": {
+        "i-input": "../../lib/iview/dist/input/index",
+        "i-button":"../../lib/iview/dist/button/index",
+        "i-message": "../../lib/iview/dist/message/index"
+      }
+}

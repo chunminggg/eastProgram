@@ -1,19 +1,13 @@
-// miniprogram/pages/home/home.js
+// miniprogram/pages/calForm/calculate.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    name:'',
-    money:'',
-    phoneNumber:''
+
   },
-  commitForm(){
-    wx.navigateTo({
-      url: '../../pages/calForm/calculate',
-    })
-  },
+
   /**
    * 生命周期函数--监听页面加载
    */
