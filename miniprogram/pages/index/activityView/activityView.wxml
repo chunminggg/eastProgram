@@ -1,0 +1,4 @@
+<!--pages/index/homeView/homeView.wxml-->
+<view>
+  <i-button type="primary" bind:click="jumpToActivityForm" class="activity-button">进入订奶页面</i-button>
+</view>

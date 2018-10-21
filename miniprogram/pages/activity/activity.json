@@ -1,7 +1,0 @@
-{
-    "usingComponents":{
-        "i-button":"../../lib/iview/dist/button/index",
-        "i-tab-bar": "../../lib/iview/dist/tab-bar/index",
-        "i-tab-bar-item": "../../lib/iview/dist/tab-bar-item/index"
-      }
-}

@@ -2,9 +2,7 @@
   "cloud": true,
   "pages": [
     "pages/index/index",
-    "pages/home/home",
     "pages/calForm/calculate",
-    "pages/activity/activity",
     "pages/milk/milk"
   ],
   "window": {

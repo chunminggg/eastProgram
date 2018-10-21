@@ -3,24 +3,17 @@ const app = getApp()
 
 Page({
   data: {
-    current:'index',
-
+    current: 'index',
   },
 
   onLoad: function() {
 
   },
-  handleChange({detail}){
-    if (detail.key == 'activity') {
-      wx.redirectTo({
-        url: '../../pages/activity/activity',
-      })
-    }
+  handleChange({
+    detail
+  }) {
+      this.setData({
+        current: detail.key
+      });
   },
-  jumpToActivityForm(){
-    wx.navigateTo({
-      url: '../../pages/home/home',
-    })
-  },
-
 })

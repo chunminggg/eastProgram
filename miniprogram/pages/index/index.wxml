@@ -1,11 +1,14 @@
 <!--index.wxml-->
-<view >
-<i-button type="primary" bind:click="jumpToActivityForm" class="activity-button">进入活动页面</i-button>
-<view >
-   <i-tab-bar fixed current="{{ current }}" bindchange="handleChange">
-    <i-tab-bar-item key="index" icon="homepage" current-icon="homepage_fill" title="首页"></i-tab-bar-item>
-    <i-tab-bar-item key="activity" icon="group" current-icon="group_fill" title="活动"></i-tab-bar-item>
-</i-tab-bar> 
-</view>
+<view>
+  <view>
+    <home-view wx:if="{{current==='index'}}"></home-view>
+    <activity-view wx:if="{{current==='activity'}}"></activity-view>
+  </view>
+  <view>
+    <i-tab-bar fixed current="{{ current }}" bindchange="handleChange">
+      <i-tab-bar-item key="index" icon="homepage" current-icon="homepage_fill" title="首页"></i-tab-bar-item>
+      <i-tab-bar-item key="activity" icon="group" current-icon="group_fill" title="活动"></i-tab-bar-item>
+    </i-tab-bar>
+  </view>
 
 </view>

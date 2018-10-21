@@ -1,0 +1,4 @@
+<!--pages/index/homeView/homeView.wxml-->
+<view>
+  <i-button type="primary" bind:tap="jumpToActivityForm" class="activity-button">进入活动页面</i-button>
+</view>
