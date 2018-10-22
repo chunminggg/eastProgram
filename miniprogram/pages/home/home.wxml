@@ -1,10 +1,20 @@
-<!--index.wxml-->
-<view class="">
-  <i-panel title="佣金计算">
-    <i-input value="{{ name }}" title="姓名" autofocus placeholder="请输入姓名" bind:change="nameChange"/>
-    <i-input value="{{ phoneNumber }}" type="number" title="联系电话" placeholder="请输入手机号" bind:change="phoneNumberChange" />
-    <i-input value="{{ money }}" title="资产" type='number' placeholder="请输入投资资产(单位：万)" bind:change="moneyChange" />
-    <i-button type='primary' bind:tap="commitForm">提交</i-button>
+<view>
+  <i-panel class="cell-panel-demo" title="题目">
+    <i-cell-group>
+      <i-cell title="1. 您预计将投入多少资金在新开账户内" is-link bind:click="clickFirst" value="{{value1}}"></i-cell>
+      <i-cell title="2. 您是否需要开通融资融券" is-link bind:click="clickSecond" value="{{value2}}"></i-cell>
+      <i-cell title="3. 您预计将投入多少资金在新开账户内 " bind:click="clickThird" is-link value="{{value3}}"></i-cell>
+      <i-cell title="4. 您有多少年的股市投资经验 " is-link bind:click="clickForth" value="{{value4}}"></i-cell>
+    </i-cell-group>
   </i-panel>
-  <i-message id="message" />
+  <view>
+    <i-button type='primary'>提交问卷</i-button>
+  </view>
+  <!-- 选择题 -->
+  <view>
+  <i-action-sheet visible="{{ isShow1 }}" actions="{{ actions1 }}" show-cancel bind:cancel="handleCancel1" bind:click="handleClickItem1" />
+  <i-action-sheet visible="{{ isShow2 }}" actions="{{ actions2 }}" show-cancel bind:cancel="handleCancel2" bind:click="handleClickItem2" />
+    <i-action-sheet visible="{{ isShow3 }}" actions="{{ actions3 }}" show-cancel bind:cancel="handleCancel3" bind:click="handleClickItem3" />
+      <i-action-sheet visible="{{ isShow4 }}" actions="{{ actions4 }}" show-cancel bind:cancel="handleCancel4" bind:click="handleClickItem4" />
+  </view>
 </view>

@@ -1,8 +1,26 @@
 /* pages/index/homeView/homeView.wxss */
+.first-page{
+  margin-top:100rpx;
+}
 .home-view {
   display: flex;
   justify-content: center;
 }
 .home-image{
   margin-left: 90rpx;
+}
+.first-title{
+  text-align: center;
+  font-weight: bold;
+}
+.first-des {
+  font-size: 24rpx;
+  text-align: center;
+  margin-top:30rpx;
+}
+.card-view{
+  margin-top:60rpx;
+}
+.foot-button{
+  margin-top:60rpx;
 }

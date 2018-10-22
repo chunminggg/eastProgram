@@ -9,8 +9,8 @@
   "window": {
     "backgroundColor": "#F6F6F6",
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarBackgroundColor": "#2d8cf0",
     "navigationBarTitleText": "东北助手",
-    "navigationBarTextStyle": "black"
+    "navigationBarTextStyle": "white"
   }
 }

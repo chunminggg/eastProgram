@@ -1,5 +1,6 @@
 // miniprogram/pages/home/home.js
 const db = require('../../tool/db.js')
+const options = require('./options.js')
 const {
   $Message
 } = require('../../lib/iview/dist/base/index');
@@ -10,61 +11,94 @@ Component({
   data: {
     name: '',
     money: '',
-    phoneNumber: ''
+    phoneNumber: '',
+    isShow1:false,
+    isShow2: false,
+    isShow3: false,
+    isShow4: false,
+    value1:'',
+    value2: '',
+    value3: '',
+    value4: '',
+    actions1:options.one,
+    actions2:options.two,
+    actions3:options.three,
+    actions4:options.four
   },
   methods: {
     commitForm() {
-      let validate = this.validateData()
-      if (validate) {
-        let params = {
-          data: {
-            name: this.data.name,
-            money: this.data.money,
-            phoneNumber: this.data.phoneNumber
-          }
-        }
-        db.collection('assets').add(params).then(res => {
-          let calculateNumber = 0;
-          calculateNumber = Number(this.data.money) + 1;
-          wx.navigateTo({
-            url: `../../pages/calForm/calculate?calculateNumber=${calculateNumber}`,
-          })
-        }).catch(console.error)
-      }
     },
-    validateData() {
-      if (!this.data.name || !this.data.money) {
-        wx.showToast({
-          title: '表单填写不完整',
-          icon: 'none'
-        })
-        return false
-        // } else if (!(/^1[34578]\d{9}$/.test(this.data.phoneNumber))) {
-        //   wx.showToast({
-        //     title: '手机号输入有误',
-        //     icon: 'none'
-        //   })
-        //   return false;
-        // } else {
-        return true
-      }
-    },
-    nameChange(e) {
+    clickFirst(){
       this.setData({
-        name: e.detail.detail.value
-      })
+        isShow1: true
+      });
     },
-    phoneNumberChange(e) {
+    handleCancel1(){
       this.setData({
-        phoneNumber: e.detail.detail.value
-      })
+        isShow1: false
+      });
     },
-    moneyChange(e) {
+    handleClickItem1({ detail }) {
+      const index = detail.index ;
+
       this.setData({
-        money: e.detail.detail.value
+        value1:this.data.actions1[index].name
       })
+      this.handleCancel1()
+    },
+    clickSecond() {
+      this.setData({
+        isShow2: true
+      });
+    },
+    handleCancel2() {
+      this.setData({
+        isShow2: false
+      });
+    },
+    handleClickItem2({ detail }) {
+      const index = detail.index;
+      this.setData({
+        value2: this.data.actions2[index].name
+      })
+      this.handleCancel2()
+    },
+    clickThird() {
+      this.setData({
+        isShow3: true
+      });
+    },
+    handleCancel3() {
+      this.setData({
+        isShow3: false
+      });
+    },
+    handleClickItem3({ detail }) {
+      const index = detail.index;
+      this.setData({
+        value3: this.data.actions3[index].name
+      })
+      this.handleCancel3()
+    },
+    clickForth() {
+      this.setData({
+        isShow4: true
+      });
+    },
+    handleCancel4() {
+      this.setData({
+        isShow4: false
+      });
+    },
+    handleClickItem4({ detail }) {
+      const index = detail.index;
+      this.setData({
+        value4: this.data.actions4[index].name
+      })
+      this.handleCancel4()
     },
   },
+  
   /**
    * 生命周期函数--监听页面加载
    */

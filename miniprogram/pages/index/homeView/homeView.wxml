@@ -1,8 +1,21 @@
 <!--pages/index/homeView/homeView.wxml-->
-<view >
-<view class='home-image'><image src='../../../images/homeImage.jpg' mode='aspectFit'></image></view>
-<view>
-  <i-button type="primary" bind:tap="jumpToActivityForm" class="activity-button">进入计算页面</i-button>
+<view class='first-page'>
+  <view class='first-title'>
+    <text>牛市要致富，必先备账户</text>
+  </view>
+  <view class='first-des'>
+    <text>测试你的账户属性，挑战费率极限</text>
+  </view>
+<view class='card-view'>
+  <i-card title="活动说明">
+    <view slot="content">
+      <text>参与页面活动调查问卷测试，</text>
+      <text>页面将根据您所给出的回答测评您的交易佣金，</text>
+      <text>如您存在需求，可点击预约开户提交申请</text>
+    </view>
+  </i-card>
 </view>
+<view class='foot-button'>
+  <i-button type="primary" bind:tap="jumpToActivityForm" class="activity-button">进入计算页面</i-button></view>
 
 </view>
