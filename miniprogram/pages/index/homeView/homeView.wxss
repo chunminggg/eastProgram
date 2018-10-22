@@ -1,1 +1,8 @@
 /* pages/index/homeView/homeView.wxss */
+.home-view {
+  display: flex;
+  justify-content: center;
+}
+.home-image{
+  margin-left: 90rpx;
+}

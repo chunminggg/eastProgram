@@ -1,9 +1,10 @@
 <!--index.wxml-->
-<view class="container">
-  <i-panel title="基础用法">
-    <i-input value="{{ name }}" title="姓名" autofocus placeholder="请输入姓名" />
-    <i-input value="{{ phoneNumber }}" type="number" title="联系电话" placeholder="请输入手机号" />
-    <i-input value="{{ money }}" title="资产" placeholder="请输入投资资产" />
-    <i-button type='primary' bind:tap="commitForm">提交</i-button>
+<view class="">
+  <i-panel title="佣金计算">
+    <i-input value="{{ name }}" title="姓名" autofocus placeholder="请输入姓名" bind:change="nameChange"/>
+    <i-input value="{{ phoneNumber }}" type="number" title="联系电话" placeholder="请输入手机号" bind:change="phoneNumberChange" />
+    <i-input value="{{ money }}" title="资产" type='number' placeholder="请输入投资资产(单位：万)" bind:change="moneyChange" />
+        <i-button type='primary' bind:tap="commitForm">提交</i-button>
+
   </i-panel>
 </view>

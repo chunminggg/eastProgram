@@ -1,4 +1,8 @@
 <!--pages/index/homeView/homeView.wxml-->
+<view >
+<view class='home-image'><image src='../../../images/homeImage.jpg' mode='aspectFit'></image></view>
 <view>
-  <i-button type="primary" bind:tap="jumpToActivityForm" class="activity-button">进入活动页面</i-button>
+  <i-button type="primary" bind:tap="jumpToActivityForm" class="activity-button">进入计算页面</i-button>
+</view>
+
 </view>
