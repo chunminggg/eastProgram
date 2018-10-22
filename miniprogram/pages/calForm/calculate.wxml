@@ -1,4 +1,4 @@
 <view class='container'>
-<text>恭喜您的利率仅需0%</text>
+<text>恭喜您的利率仅需{{calculateNumber}}%</text>
 <i-button bind:click="returnHome">返回首页</i-button>
 </view>

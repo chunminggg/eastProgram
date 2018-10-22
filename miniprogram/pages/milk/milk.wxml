@@ -1,10 +1,10 @@
 <!--index.wxml-->
-<view class="container">
-<i-panel title="基础用法">
-    <i-input value="{{ name }}" title="姓名" autofocus placeholder="请输入姓名" />
-    <i-input value="{{ phoneNumber }}" type="number" title="联系电话" placeholder="请输入手机号" />
-    <i-input value="{{ address }}" type="textarea" title="详细地址" placeholder="请输入详细地址(最多50字)" maxlength="50" />
-<i-button type='primary' bind:click="commitForm">提交</i-button>
-<i-message id="message" />
-</i-panel>
+<view class="">
+  <i-panel title="基础用法">
+    <i-input value="{{ name }}" title="姓名" autofocus placeholder="请输入姓名" data-str="name" bind:change="changeInput" />
+    <i-input value="{{ phoneNumber }}" type="number" title="联系电话" data-str="phoneNumber" bind:change="changeInput" placeholder="请输入手机号" />
+    <i-input value="{{ address }}" type="textarea" title="详细地址" data-str="address" bind:change="changeInput" placeholder="请输入详细地址(最多50字)" maxlength="50" />
+  </i-panel>
+  <i-button type='primary' bind:click="commitForm">提交</i-button>
+  <i-message id="message" />
 </view>

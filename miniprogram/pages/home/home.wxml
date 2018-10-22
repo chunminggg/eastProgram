@@ -4,7 +4,7 @@
     <i-input value="{{ name }}" title="姓名" autofocus placeholder="请输入姓名" bind:change="nameChange"/>
     <i-input value="{{ phoneNumber }}" type="number" title="联系电话" placeholder="请输入手机号" bind:change="phoneNumberChange" />
     <i-input value="{{ money }}" title="资产" type='number' placeholder="请输入投资资产(单位：万)" bind:change="moneyChange" />
-        <i-button type='primary' bind:tap="commitForm">提交</i-button>
-
+    <i-button type='primary' bind:tap="commitForm">提交</i-button>
   </i-panel>
+  <i-message id="message" />
 </view>
