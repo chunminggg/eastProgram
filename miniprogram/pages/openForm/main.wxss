@@ -1,0 +1,12 @@
+/* miniprogram/pages/openForm/main.wxss */
+.title{
+  font-weight: bold;
+  text-align: center;
+  font-size: 50rpx;
+}
+.card-view{
+  margin-top:40rpx;
+}
+.one-des{
+  margin-top:20rpx;
+}

@@ -8,7 +8,7 @@
     </i-cell-group>
   </i-panel>
   <view>
-    <i-button type='primary'>提交问卷</i-button>
+    <i-button type='primary' bind:click="commitForm">提交问卷</i-button>
   </view>
   <!-- 选择题 -->
   <view>

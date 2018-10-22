@@ -4,7 +4,8 @@
     "pages/index/index",
     "pages/home/home",
     "pages/calForm/calculate",
-    "pages/milk/milk"
+    "pages/milk/milk",
+    "pages/openForm/main"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",

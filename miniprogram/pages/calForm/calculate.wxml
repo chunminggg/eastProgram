@@ -1,4 +1,18 @@
-<view class='container'>
-<text>恭喜您的利率仅需{{calculateNumber}}%</text>
-<i-button bind:click="returnHome">返回首页</i-button>
+<view class="">
+  <i-panel title="佣金计算">
+    <i-input value="{{ name }}" title="姓名" autofocus placeholder="请输入姓名" bind:change="nameChange"/>
+    <i-input value="{{ phoneNumber }}" type="number" title="联系电话" placeholder="请输入手机号" bind:change="phoneNumberChange" />
+    <i-input value="{{ money }}" title="地址" type='number' type='textarea' placeholder="请输入地址" bind:change="moneyChange" />
+    <i-button type='primary' bind:tap="commitForm">提交</i-button>
+  </i-panel>
+  <view class='bottom-tip'>
+  <text>
+  更多优惠，欢迎致电苏州东北证券客服电话：0512-68633352
+  </text>
+  </view>
+  <i-message id="message" />
+  <i-modal title="恭喜" visible="{{ visible1 }}" bind:ok="handleClose1" bind:cancel="handleClose2">
+    <view>开户成功，三个工作日之内会有工作人员联系您。</view>
+  
+</i-modal>
 </view>

@@ -1,0 +1,31 @@
+<view>
+  <view>
+    <text>
+您的佣金是:
+</text>
+    <view class='title'>
+      <text>
+万分之1
+</text>
+    </view>
+  </view>
+  <view>
+    <view class='card-view'>
+      <i-card title="活动说明">
+        <view slot="content">
+          <text>开户说明：</text>
+          <view class='one-des'>
+          <text>①  交易佣金为证券公司经证监会同意，向二级市场投资者收取的单笔交易的手续费；</text></view>
+          <view class='one-des'>
+          <text> ②  页面中的交易佣金不包含：印花税、过户费、证券监管费</text></view>
+         <view class='one-des'>
+          <text>③  页面中的交易佣金仅为测试结果，最终交易佣金 需要您同客服人员确认；</text></view>
+         <view class='one-des'>
+          <text> ④  预约开户将由苏州东北证券客服人员与您联系</text></view>
+        </view>
+      </i-card>
+      <i-button type='primary' bind:click="previewForm">预约开户</i-button>
+
+    </view>
+  </view>
+</view>

@@ -3,6 +3,8 @@
     "i-input": "../../lib/iview/dist/input/index",
     "i-button": "../../lib/iview/dist/button/index",
     "i-message": "../../lib/iview/dist/message/index",
-    "i-modal": "../../lib/iview/dist/modal/index"
+    "i-cell-group": "../../../lib/iview/dist/cell-group/index",
+    "i-cell": "../../../lib/iview/dist/cell/index",
+    "i-action-sheet": "../../../lib/iview/dist/action-sheet/index"
   }
 }

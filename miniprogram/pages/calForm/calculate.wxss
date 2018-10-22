@@ -1,1 +1,7 @@
 /* miniprogram/pages/calForm/calculate.wxss */
+.bottom-tip{
+  position: absolute;
+  bottom: 0;
+  font-size: 24rpx;
+  text-align: center;
+}

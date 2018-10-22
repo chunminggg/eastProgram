@@ -27,6 +27,9 @@ Component({
   },
   methods: {
     commitForm() {
+      wx.navigateTo({
+        url: '../../pages/openForm/main',
+      })
     },
     clickFirst(){
       this.setData({
