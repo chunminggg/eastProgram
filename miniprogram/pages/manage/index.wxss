@@ -1,0 +1,10 @@
+/* miniprogram/pages/manage/index.wxss */
+.form-page{
+  padding: 20rpx;
+}
+.card-view{
+  margin-top:30rpx;
+}
+.load-button{
+  margin-top:30rpx;
+}

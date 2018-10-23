@@ -23,5 +23,10 @@ Component({
         url: '../../pages/home/home',
       })
     },
+    jumpToManage(){
+        wx.navigateTo({
+          url: '../../pages/manage/index',
+        })
+    }
   }
 })

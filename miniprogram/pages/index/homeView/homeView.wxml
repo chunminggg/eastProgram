@@ -17,5 +17,6 @@
 </view>
 <view class='foot-button'>
   <i-button type="primary" bind:tap="jumpToActivityForm" class="activity-button">进入计算页面</i-button></view>
-
+  <view class='foot-button'>
+  <i-button type="primary" bind:tap="jumpToManage" class="activity-button">后台管理</i-button></view>
 </view>
