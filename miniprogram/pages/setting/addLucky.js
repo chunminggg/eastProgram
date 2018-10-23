@@ -35,6 +35,7 @@ Component({
       db.collection('lucky').add({
         data: {
           id: this.data.value,
+          name:'hello'
         }
       }).then(res => {
         wx.showToast({
