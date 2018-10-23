@@ -1,0 +1,4 @@
+<!--pages/setting/addLucky.wxml-->
+
+<i-input value="{{value}}" title="中奖账号" bind:change="changeInput" placeholder="请输入中奖账号" />
+<i-button bind:click="sure" type="primary">确定</i-button>

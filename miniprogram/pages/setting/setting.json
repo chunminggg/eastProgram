@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "i-button": "../../../lib/iview/dist/button/index",
+    "i-input": "../../../lib/iview/dist/input/index",
+    "i-cell-group": "../../../lib/iview/dist/cell-group/index",
+    "i-cell": "../../../lib/iview/dist/cell/index",
+    "i-panel": "../../../lib/iview/dist/panel/index",
+    "i-action-sheet": "../../../lib/iview/dist/action-sheet/index"
+  }
+}

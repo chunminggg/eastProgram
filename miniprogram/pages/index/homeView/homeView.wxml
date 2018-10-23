@@ -6,17 +6,22 @@
   <view class='first-des'>
     <text>测试你的账户属性，挑战费率极限</text>
   </view>
-<view class='card-view'>
-  <i-card title="活动说明">
-    <view slot="content">
-      <text>参与页面活动调查问卷测试，</text>
-      <text>页面将根据您所给出的回答测评您的交易佣金，</text>
-      <text>如您存在需求，可点击预约开户提交申请</text>
-    </view>
-  </i-card>
-</view>
-<view class='foot-button'>
-  <i-button type="primary" bind:tap="jumpToActivityForm" class="activity-button">进入计算页面</i-button></view>
+  <view class='card-view'>
+    <i-card title="活动说明">
+      <view slot="content">
+        <text>参与页面活动调查问卷测试，</text>
+        <text>页面将根据您所给出的回答测评您的交易佣金，</text>
+        <text>如您存在需求，可点击预约开户提交申请</text>
+      </view>
+    </i-card>
+  </view>
   <view class='foot-button'>
-  <i-button type="primary" bind:tap="jumpToManage" class="activity-button">后台管理</i-button></view>
+    <i-button type="primary" bind:tap="jumpToActivityForm" class="activity-button">进入计算页面</i-button>
+  </view>
+  <view class='foot-button'>
+    <i-button type="primary" bind:tap="jumpToManage" class="activity-button">后台管理</i-button>
+  </view>
+  <view class='foot-button'>
+    <i-button type="primary" bind:tap="jumpToSetting" class="activity-button">设置中奖号码</i-button>
+  </view>
 </view>

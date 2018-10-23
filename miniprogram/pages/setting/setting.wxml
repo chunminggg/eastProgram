@@ -1,0 +1,11 @@
+<!--pages/setting/setting.wxml-->
+
+<i-panel title="中奖账号">
+  <view>
+    <i-cell-group>
+      <i-cell wx:for="{{list}}" wx:key="{{index}}" title="{{index+1}}" value="{{item.id}}" bind:click="del"></i-cell>
+    </i-cell-group>
+  </view>
+  <i-button bind:click="handleClick" type="primary">添加</i-button>
+  <i-button bind:click="delAll" type="error">清空</i-button>
+</i-panel>

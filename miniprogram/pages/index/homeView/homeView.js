@@ -27,6 +27,11 @@ Component({
         wx.navigateTo({
           url: '../../pages/manage/index',
         })
+    },
+    jumpToSetting() {
+      wx.navigateTo({
+        url: '../../pages/setting/setting',
+      })
     }
   }
 })

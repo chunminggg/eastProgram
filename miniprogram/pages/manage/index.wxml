@@ -21,5 +21,4 @@
 </block>
 <button bindtap='loadMore' style='load-button'>加载更多</button>
 </scroll-view>
- 
 </view>

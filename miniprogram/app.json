@@ -3,6 +3,7 @@
   "pages": [
     "pages/index/index",
     "pages/home/home",
+    "pages/setting/setting",    
     "pages/calForm/calculate",
     "pages/milk/milk",
     "pages/openForm/main",
