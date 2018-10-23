@@ -10,40 +10,78 @@ Component({
     name: '',
     money: '',
     phoneNumber: '',
-    visible1:false,
+    visible1: false,
 
   },
   methods: {
     commitForm() {
+      let that = this
       let validate = this.validateData()
       if (validate) {
         let params = {
           data: {
             name: this.data.name,
-            money: this.data.money,
+            "address": this.data.money,
             phoneNumber: this.data.phoneNumber
           }
         }
-        db.collection('assets').add(params).then(res => {
-            this.setData({
-              visible1:true,
-            })
-        
-        }).catch(console.error)
+        wx.getStorage({
+          key: 'answer',
+          success: function (res) {
+            let info = res.data
+            params.data["value1"] = res.data["value1"]
+            params.data["value2"] = res.data["value2"]
+            params.data["value3"] = res.data["value3"]
+            params.data["value4"] = res.data["value4"]
+            params.data["index1"] = res.data["index1"]
+            params.data["index2"] = res.data["index2"]
+            params.data["index3"] = res.data["index3"]
+            params.data["index4"] = res.data["index4"]
+            db.collection('assets').add(params).then(res => {
+              that.setData({
+                visible1: true,
+              })
+
+            }).catch(console.error)
+          },
+        })
       }
     },
-    handleClose1(){
+    handleClose1() {
       wx.redirectTo({
         url: '../../pages/index/index',
       })
     },
-    handleClose2(){
+    handleClose2() {
       this.setData({
-        visible1:false,
+        visible1: false,
       })
     },
     validateData() {
-      return true
+      if (this.data.name == '') {
+        $Message({
+          content: '姓名不能为空',
+          type: "warning"
+        })
+        return false
+      }
+      else if (this.data.phoneNumber == '') {
+        $Message({
+          content: '手机号不能为空',
+          type: "warning"
+        })
+        return false
+      }
+      else if (this.data.money == '') {
+        $Message({
+          content: '地址不能为空',
+          type: "warning"
+        })
+        return false
+      }
+      else {
+        return true
+      }
     },
     nameChange(e) {
       this.setData({

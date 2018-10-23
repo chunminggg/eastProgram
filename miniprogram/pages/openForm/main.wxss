@@ -1,7 +1,10 @@
 /* miniprogram/pages/openForm/main.wxss */
+.form-page {
+  padding: 20rpx;
+}
 .title{
   font-weight: bold;
-  text-align: center;
+
   font-size: 50rpx;
 }
 .card-view{

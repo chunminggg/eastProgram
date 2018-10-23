@@ -17,4 +17,5 @@
     <i-action-sheet visible="{{ isShow3 }}" actions="{{ actions3 }}" show-cancel bind:cancel="handleCancel3" bind:click="handleClickItem3" />
       <i-action-sheet visible="{{ isShow4 }}" actions="{{ actions4 }}" show-cancel bind:cancel="handleCancel4" bind:click="handleClickItem4" />
   </view>
+  <i-toast id="toast" />
 </view>

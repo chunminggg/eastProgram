@@ -1,10 +1,14 @@
 // miniprogram/pages/openForm/main.js
+const checkState = require("./check.js")
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    percent:'1.3',
+    condition:true,
+    secondPercent:'1'
 
   },
   previewForm(){
@@ -16,7 +20,18 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    let that = this
+    wx.getStorage({
+      key: 'answer',
+      success(res) {
+        let data = checkState(res.data)
+        that.setData({
+          percent:data["percent"],
+          condition: data["conditon"],
+          secondPercent:data["secondPercent"]
+        })
+      },
+    })
   },
 
   /**

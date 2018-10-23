@@ -2,7 +2,7 @@
   <i-panel title="佣金计算">
     <i-input value="{{ name }}" title="姓名" autofocus placeholder="请输入姓名" bind:change="nameChange"/>
     <i-input value="{{ phoneNumber }}" type="number" title="联系电话" placeholder="请输入手机号" bind:change="phoneNumberChange" />
-    <i-input value="{{ money }}" title="地址" type='number' type='textarea' placeholder="请输入地址" bind:change="moneyChange" />
+    <i-input value="{{ money }}" title="地址"  type='textarea' placeholder="请输入地址" bind:change="moneyChange" />
     <i-button type='primary' bind:tap="commitForm">提交</i-button>
   </i-panel>
   <view class='bottom-tip'>
