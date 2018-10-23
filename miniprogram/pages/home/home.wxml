@@ -1,10 +1,10 @@
 <view>
   <i-panel class="cell-panel-demo" title="题目">
     <i-cell-group>
-      <i-cell title="1. 您预计将投入多少资金在新开账户内" is-link bind:click="clickFirst" value="{{value1}}"></i-cell>
-      <i-cell title="2. 您是否需要开通融资融券" is-link bind:click="clickSecond" value="{{value2}}"></i-cell>
-      <i-cell title="3. 您预计将投入多少资金在新开账户内 " bind:click="clickThird" is-link value="{{value3}}"></i-cell>
-      <i-cell title="4. 您有多少年的股市投资经验 " is-link bind:click="clickForth" value="{{value4}}"></i-cell>
+      <i-cell title="1. 您预计将投入多少资金在新开账户内" is-link bind:click="clickFirst" label="{{value1}}"></i-cell>
+      <i-cell title="2. 您是否需要开通融资融券" is-link bind:click="clickSecond" label="{{value2}}"></i-cell>
+      <i-cell title="3. 您有多少年的股市投资经验 " bind:click="clickThird" is-link label="{{value3}}"></i-cell>
+      <i-cell title="4. 您有购买金融产品的习惯吗 " is-link bind:click="clickForth" label="{{value4}}"></i-cell>
     </i-cell-group>
   </i-panel>
   <view>

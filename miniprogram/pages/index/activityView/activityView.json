@@ -2,6 +2,7 @@
   "component": true,
   "usingComponents": {
     "i-button": "../../../lib/iview/dist/button/index",
-    "i-input": "../../../lib/iview/dist/input/index"
+    "i-input": "../../../lib/iview/dist/input/index",
+    "i-card": "../../../lib/iview/dist/card/index"
   }
 }

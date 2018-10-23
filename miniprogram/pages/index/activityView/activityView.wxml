@@ -1,21 +1,22 @@
 <!--pages/index/homeView/homeView.wxml-->
 <view class='form-page'>
-<view class='first-page'>
-  <view class='first-title'>
-    <text>明星客户，快来领取你的奖品</text>
-  </view>
-  <view class='first-des'>
-    <text>晨起一杯奶，激活每一天</text>
-  </view>
-<view class='card-view'>
-  <i-card title="活动说明">
-    <view slot="content">
-      <text>活动说明：每月5号前，您可以在此页面输入您的客户号查询您是否为苏州东北证券上月的明星客户，明星客户将获得由苏州东北证券赠送的新希望24h鲜奶订奶服务1个月，当月赠送（起送日相较于5号会有3-5天的延迟）；</text>
+  <view class='first-page'>
+    <view class='first-title'>
+      <text>明星客户，快来领取你的奖品</text>
     </view>
-  </i-card>
-</view>
-<view class='foot-button'>
-<i-input value="{{ code }}" title="资金账号"  placeholder="输入您的资金账号" bind:change="codeChange"></i-input>
-</view>
-</view>
+    <view class='first-des'>
+      <text>晨起一杯奶，激活每一天</text>
+    </view>
+    <view class='card-view'>
+      <i-card title="活动说明">
+        <view slot="content">
+          <text>活动说明：每月5号前，您可以在此页面输入您的客户号查询您是否为苏州东北证券上月的明星客户，明星客户将获得由苏州东北证券赠送的新希望24h鲜奶订奶服务1个月，当月赠送（起送日相较于5号会有3-5天的延迟）；</text>
+        </view>
+      </i-card>
+    </view>
+    <view class='foot-button'>
+      <i-input value="{{ code }}" title="资金账号" placeholder="输入您的资金账号" bind:change="codeChange"></i-input>
+      <i-button bind:click="search" type="primary">获奖查询</i-button>
+    </view>
+  </view>
 </view>
