@@ -2,7 +2,7 @@
   "cloud": true,
   "pages": [
     "pages/index/index",
-    "pages/home/homisShow1e",
+    "pages/home/home",
     "pages/calForm/calculate",
     "pages/milk/milk",
     "pages/openForm/main"
