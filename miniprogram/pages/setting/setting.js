@@ -13,12 +13,12 @@ Page({
     wx.showModal({
       title: '提示',
       content: '确定清空？',
-      success(res) {
+      success: (res) => {
         if (res.confirm) {
           wx.cloud.callFunction({
             name: 'delAllLucky'
           }).then((data) => {
-            console.log(data)
+            this.refreshData();
           })
         } else if (res.cancel) {
           console.log('用户点击取消')
@@ -32,24 +32,25 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function(options) {
-  },
+  onLoad: function(options) {},
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function() {
 
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function() {
+  refreshData() {
     db.collection('lucky').get().then(res => {
       this.setData({
         list: res.data
       });
     }).catch(console.error)
+  },
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow: function() {
+    this.refreshData();
   },
 
   /**
