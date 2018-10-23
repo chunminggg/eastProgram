@@ -11,8 +11,8 @@
   </text>
   </view>
   <i-message id="message" />
-  <i-modal title="恭喜" visible="{{ visible1 }}" bind:ok="handleClose1" bind:cancel="handleClose2">
-    <view>开户成功，三个工作日之内会有工作人员联系您。</view>
+  <i-modal title="预约成功" visible="{{ visible1 }}" bind:ok="handleClose1" bind:cancel="handleClose2">
+    <view>稍后会有工作人员联系您。</view>
   
 </i-modal>
 </view>
