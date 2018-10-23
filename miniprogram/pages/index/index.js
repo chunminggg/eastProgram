@@ -7,13 +7,15 @@ Page({
   },
 
   onLoad: function() {
-
+    // wx.navigateTo({
+    //   url: '../../pages/milk/milk',
+    // })
   },
   handleChange({
     detail
   }) {
-      this.setData({
-        current: detail.key
-      });
+    this.setData({
+      current: detail.key
+    });
   },
 })

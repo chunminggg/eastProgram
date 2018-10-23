@@ -16,6 +16,9 @@ Page({
   },
   commitForm() {
     if (this.validate()) {
+      wx.showLoading({
+        title: '正在提交',
+      })
       db.collection('milkData').add({
         data: {
           name: this.data.name,
@@ -23,15 +26,13 @@ Page({
           phoneNumber: this.data.phoneNumber
         }
       }).then(res => {
-        $Message({
-          type: 'success',
-          content: '恭喜您中奖了'
-        });
-        setTimeout(() => {
-          wx.navigateBack({
-            url: '../../pages/index/index',
-          })
-        }, 2000)
+        wx.hideLoading();
+        wx.navigateTo({
+          url: '../../pages/index/index',
+        })
+        wx.showToast({
+          title: '数据提交成功！',
+        })
       }).catch(console.error)
     }
   },
@@ -43,13 +44,13 @@ Page({
       })
       return false
     }
-    //  else if (!(/^1[34578]\d{9}$/.test(this.data.phoneNumber))) {
-    //   wx.showToast({
-    //     title: '手机号输入有误',
-    //     icon: 'none'
-    //   })
-    //   return false;
-    // } 
+     else if (!(/^1[34578]\d{9}$/.test(this.data.phoneNumber))) {
+      wx.showToast({
+        title: '手机号输入有误',
+        icon: 'none'
+      })
+      return false;
+    } 
     else {
       return true
     }
