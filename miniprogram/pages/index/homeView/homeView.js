@@ -28,6 +28,11 @@ Component({
           url: '../../pages/manage/index',
         })
     },
+    jumpToLucky(){
+      wx.navigateTo({
+        url: '../../pages/lucky/index',
+      })
+  },
     jumpToSetting() {
       wx.navigateTo({
         url: '../../pages/setting/setting',

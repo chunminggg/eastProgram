@@ -1,0 +1,21 @@
+<view class='form-page'>
+<scroll-view scroll-y>
+<block wx:for="{{list}}" wx:key="{{item._id}}">
+ <view class='card-view'>
+    <i-card title="{{item.name}}">
+      <view slot="content">
+        <view>
+          <text>手机号：{{item.phoneNumber}}</text>
+        </view>
+        <view>
+          <text>地址:{{item.address}}</text>
+        </view>
+        <view>
+        </view>
+      </view>
+    </i-card>
+  </view>
+</block>
+<button bindtap='loadMore' style='load-button'>加载更多</button>
+</scroll-view>
+</view>
