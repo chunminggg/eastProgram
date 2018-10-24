@@ -3,7 +3,9 @@ const db = require('../../tool/db.js')
 const {
   $Message
 } = require('../../lib/iview/dist/base/index');
-
+import {
+  saveOrder
+} from '../.././lib/service.js'
 Page({
 
   /**
@@ -19,13 +21,15 @@ Page({
       wx.showLoading({
         title: '正在提交',
       })
-      db.collection('milkData').add({
+      let numberId = wx.getStorageSync('luckyNumber')
+      saveOrder({
         data: {
           name: this.data.name,
           address: this.data.address,
-          phoneNumber: this.data.phoneNumber
+          phoneNumber: this.data.phoneNumber,
+          luckyNumber:numberId
         }
-      }).then(res => {
+      }).then(res =>{
         wx.hideLoading();
         wx.navigateTo({
           url: '../../pages/index/index',
@@ -33,7 +37,10 @@ Page({
         wx.showToast({
           title: '数据提交成功！',
         })
-      }).catch(console.error)
+        }).catch(console.error)
+      // db.collection('milkData').add().then(res => {
+       
+      // }).catch(console.error)
     }
   },
   validate() {

@@ -2,6 +2,9 @@ const db = require('../../tool/db.js')
 const {
   $Message
 } = require('../../lib/iview/dist/base/index');
+import {
+  saveUserAnser
+} from '../.././lib/service.js'
 Component({
   /**
    * 页面的初始数据
@@ -21,13 +24,13 @@ Component({
         let params = {
           data: {
             name: this.data.name,
-            "address": this.data.money,
+            address: this.data.money,
             phoneNumber: this.data.phoneNumber
           }
         }
         wx.getStorage({
           key: 'answer',
-          success: function (res) {
+          success: function(res) {
             let info = res.data
             params.data["value1"] = res.data["value1"]
             params.data["value2"] = res.data["value2"]
@@ -37,12 +40,17 @@ Component({
             params.data["index2"] = res.data["index2"]
             params.data["index3"] = res.data["index3"]
             params.data["index4"] = res.data["index4"]
-            db.collection('assets').add(params).then(res => {
+            saveUserAnser(params).then(res => {
               that.setData({
                 visible1: true,
               })
-
             }).catch(console.error)
+            // db.collection('assets').add(params).then(res => {
+            //   that.setData({
+            //     visible1: true,
+            //   })
+
+            // }).catch(console.error)
           },
         })
       }
@@ -64,22 +72,19 @@ Component({
           type: "warning"
         })
         return false
-      }
-      else if (this.data.phoneNumber == '') {
+      } else if (this.data.phoneNumber == '') {
         $Message({
           content: '手机号不能为空',
           type: "warning"
         })
         return false
-      }
-      else if (this.data.money == '') {
+      } else if (this.data.money == '') {
         $Message({
           content: '地址不能为空',
           type: "warning"
         })
         return false
-      }
-      else {
+      } else {
         return true
       }
     },
@@ -102,56 +107,56 @@ Component({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
+  onLoad: function(options) {
 
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function () {
+  onReady: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {
+  onShow: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
-  onHide: function () {
+  onHide: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload: function () {
+  onUnload: function() {
 
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function () {
+  onPullDownRefresh: function() {
 
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function () {
+  onReachBottom: function() {
 
   },
 
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
+  onShareAppMessage: function() {
 
   }
 })
